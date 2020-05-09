@@ -4,14 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
 namespace AlgoDat_praktikum
 {
-    class Program
+    public interface ISet : IMultiSet
     {
-        static void Main(string[] args)
-        {
-        }
+        bool Multiple();
     }
 }

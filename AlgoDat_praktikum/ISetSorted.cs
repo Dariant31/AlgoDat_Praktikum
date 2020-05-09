@@ -4,14 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
 namespace AlgoDat_praktikum
 {
-    class Program
+    public interface ISetSorted : IMultiSetSorted
     {
-        static void Main(string[] args)
-        {
-        }
+
     }
 }

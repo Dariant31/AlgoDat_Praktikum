@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
 namespace AlgoDat_praktikum
 {
-    class Program
+    public interface IDictionary
     {
-        static void Main(string[] args)
-        {
-        }
+        bool search(int elem);
+        bool insert(int elem);
+        bool delete(int elem);
+        void print();
     }
 }
