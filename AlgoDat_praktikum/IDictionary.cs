@@ -8,9 +8,9 @@ namespace AlgoDat_praktikum
 {
     public interface IDictionary
     {
-        bool search(int elem);
-        bool insert(int elem);
-        bool delete(int elem);
+        bool search(int element);
+        bool insert(int element);
+        bool delete(int element);
         void print();
     }
 }
