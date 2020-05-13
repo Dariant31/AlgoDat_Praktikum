@@ -8,17 +8,17 @@ namespace AlgoDat_praktikum
 {
     public class MultiSetSortedArray : IMultiSetSorted
     {
-        public bool delete(int elem)
+        public bool Delete(int elem)
         {
             throw new NotImplementedException();
         }
 
-        public bool insert(int elem)
+        public bool Insert(int elem)
         {
             throw new NotImplementedException();
         }
 
-        public void print()
+        public void Print()
         {
             throw new NotImplementedException();
         }
@@ -28,7 +28,7 @@ namespace AlgoDat_praktikum
             throw new NotImplementedException();
         }
 
-        public bool search(int elem)
+        public bool Search(int elem)
         {
             throw new NotImplementedException();
         }
