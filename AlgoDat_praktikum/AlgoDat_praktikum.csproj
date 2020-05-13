@@ -42,22 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISetSorted.cs" />
-    <Compile Include="IMultiSetSorted.cs" />
-    <Compile Include="ISet.cs" />
-    <Compile Include="IMultiSet.cs" />
-    <Compile Include="IDictionary.cs" />
-    <Compile Include="MultiSetSortedArray.cs" />
-    <Compile Include="MultiSetUnsortedArray.cs" />
+    <Compile Include="implementation\MultiSetSortedArray.cs" />
+    <Compile Include="implementation\MultiSetUnsortedArray.cs" />
+    <Compile Include="implementation\SetSortedArray.cs" />
+    <Compile Include="implementation\SetUnsortedArray.cs" />
+    <Compile Include="interfaces\IDictionary.cs" />
+    <Compile Include="interfaces\IMultiSet.cs" />
+    <Compile Include="interfaces\IMultiSetSorted.cs" />
+    <Compile Include="interfaces\ISet.cs" />
+    <Compile Include="interfaces\ISetSorted.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SetSortedArray.cs" />
-    <Compile Include="SetUnsortedArray.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,12 +23,12 @@ namespace AlgoDat_praktikum
             throw new NotImplementedException();
         }
 
-        public bool search(int elem)
+        public void Sort()
         {
             throw new NotImplementedException();
         }
 
-        public void sort()
+        public bool search(int elem)
         {
             throw new NotImplementedException();
         }
