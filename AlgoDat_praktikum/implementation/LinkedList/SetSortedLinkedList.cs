@@ -1,8 +1,8 @@
 namespace AlgoDat_praktikum
 {
-    public class BinSearchTree : IBinTree
+    public class SetSortedLinkedList : ISetSorted
     {
-        public TreeElement data;
+        public ElementObject data;
         
         public bool Search(int element)
         {
@@ -25,16 +25,6 @@ namespace AlgoDat_praktikum
         }
 
         public void Sort()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void LeftRotation()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void RightRotation()
         {
             throw new System.NotImplementedException();
         }

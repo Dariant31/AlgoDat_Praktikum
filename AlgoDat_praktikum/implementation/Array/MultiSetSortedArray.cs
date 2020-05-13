@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace AlgoDat_praktikum
 {
-    public class MultiSetSortedArray : IMultiSetSorted
+    public class MultiSetSortedArray : AbstractArrayServices, IMultiSetSorted
     {
-        public int[] data;
-        
         public bool Delete(int elem)
         {
             throw new NotImplementedException();

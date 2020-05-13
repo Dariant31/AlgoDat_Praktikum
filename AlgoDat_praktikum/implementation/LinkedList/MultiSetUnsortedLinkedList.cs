@@ -2,7 +2,7 @@ namespace AlgoDat_praktikum
 {
     public class MultiSetUnsortedLinkedList : IMultiSet
     {
-        public Element data;
+        public ElementObject data;
         
         public bool Search(int element)
         {

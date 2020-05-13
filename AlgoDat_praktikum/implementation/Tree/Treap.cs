@@ -1,8 +1,8 @@
 namespace AlgoDat_praktikum
 {
-    public class SetUnsortedLinkedList : ISet
+    public class Treap : IBinTree
     {
-        public Element data;
+        public TreapElementObject data;
         
         public bool Search(int element)
         {
@@ -24,7 +24,17 @@ namespace AlgoDat_praktikum
             throw new System.NotImplementedException();
         }
 
-        public bool Multiple()
+        public void Sort()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void LeftRotation()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void RightRotation()
         {
             throw new System.NotImplementedException();
         }

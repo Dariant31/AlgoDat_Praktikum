@@ -42,20 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="implementation\AvlTree.cs" />
-    <Compile Include="implementation\BinSearchTree.cs" />
-    <Compile Include="implementation\Element.cs" />
-    <Compile Include="implementation\MultiSetSortedArray.cs" />
-    <Compile Include="implementation\MultiSetSortedLinkedList.cs" />
-    <Compile Include="implementation\MultiSetUnsortedArray.cs" />
-    <Compile Include="implementation\MultiSetUnsortedLinkedList.cs" />
-    <Compile Include="implementation\SetSortedArray.cs" />
-    <Compile Include="implementation\SetSortedLinkedList.cs" />
-    <Compile Include="implementation\SetUnsortedArray.cs" />
-    <Compile Include="implementation\SetUnsortedLinkedList.cs" />
-    <Compile Include="implementation\Treap.cs" />
-    <Compile Include="implementation\TreapElement.cs" />
-    <Compile Include="implementation\TreeElement.cs" />
+    <Compile Include="elementObject\AvlTreeObject.cs" />
+    <Compile Include="elementObject\ElementObject.cs" />
+    <Compile Include="elementObject\SearchReturnObject.cs" />
+    <Compile Include="elementObject\TreapElementObject.cs" />
+    <Compile Include="elementObject\TreeElementObject.cs" />
+    <Compile Include="implementation\Array\AbstractArrayServices.cs" />
+    <Compile Include="implementation\Array\MultiSetSortedArray.cs" />
+    <Compile Include="implementation\Array\MultiSetUnsortedArray.cs" />
+    <Compile Include="implementation\Array\SetSortedArray.cs" />
+    <Compile Include="implementation\Array\SetUnsortedArray.cs" />
+    <Compile Include="implementation\LinkedList\MultiSetSortedLinkedList.cs" />
+    <Compile Include="implementation\LinkedList\MultiSetUnsortedLinkedList.cs" />
+    <Compile Include="implementation\LinkedList\SetSortedLinkedList.cs" />
+    <Compile Include="implementation\LinkedList\SetUnsortedLinkedList.cs" />
+    <Compile Include="implementation\Tree\AvlTree.cs" />
+    <Compile Include="implementation\Tree\BinSearchTree.cs" />
+    <Compile Include="implementation\Tree\Treap.cs" />
     <Compile Include="interfaces\IBinTree.cs" />
     <Compile Include="interfaces\IDictionary.cs" />
     <Compile Include="interfaces\IMultiSet.cs" />
