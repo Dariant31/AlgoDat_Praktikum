@@ -1,8 +1,8 @@
 namespace AlgoDat_praktikum
 {
-    public class SetSortedLinkedList : ISetSorted
+    public class SetUnsortedLinkedList : ISet
     {
-        public Element data;
+        public ElementObject data;
         
         public bool Search(int element)
         {
@@ -24,7 +24,7 @@ namespace AlgoDat_praktikum
             throw new System.NotImplementedException();
         }
 
-        public void Sort()
+        public bool Multiple()
         {
             throw new System.NotImplementedException();
         }

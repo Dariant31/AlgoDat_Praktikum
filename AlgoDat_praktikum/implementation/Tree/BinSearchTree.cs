@@ -1,8 +1,8 @@
 namespace AlgoDat_praktikum
 {
-    public class Treap : IBinTree
+    public class BinSearchTree : IBinTree
     {
-        public TreapElement data;
+        public TreeElementObject data;
         
         public bool Search(int element)
         {

@@ -1,8 +1,18 @@
 namespace AlgoDat_praktikum
 {
-    public class MultiSetSortedLinkedList : IMultiSetSorted
+    public class AvlTree : IBinTree
     {
-        public Element data;
+        public TreeElementObject data;
+
+        public int BalanceFactor(int input)
+        {
+            throw new System.NotImplementedException();
+        }
+        
+        public void BalanceTree()
+        {
+            throw new System.NotImplementedException();
+        }
         
         public bool Search(int element)
         {
@@ -25,6 +35,16 @@ namespace AlgoDat_praktikum
         }
 
         public void Sort()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void LeftRotation()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void RightRotation()
         {
             throw new System.NotImplementedException();
         }

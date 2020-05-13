@@ -2,9 +2,9 @@ using System;
 
 namespace AlgoDat_praktikum
 {
-    public class Element : Object
+    public class ElementObject : Object
     {
         public int context;
-        public Element next;
+        public ElementObject next;
     }
 }
