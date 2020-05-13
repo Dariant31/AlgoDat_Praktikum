@@ -1,0 +1,7 @@
+/Users/dvs/Documents/kampus/AlgoDat_Praktikum/AlgoDat_praktikum/bin/Debug/AlgoDat_praktikum.exe.config
+/Users/dvs/Documents/kampus/AlgoDat_Praktikum/AlgoDat_praktikum/bin/Debug/AlgoDat_praktikum.exe
+/Users/dvs/Documents/kampus/AlgoDat_Praktikum/AlgoDat_praktikum/bin/Debug/AlgoDat_praktikum.pdb
+/Users/dvs/Documents/kampus/AlgoDat_Praktikum/AlgoDat_praktikum/obj/Debug/AlgoDat_praktikum.csprojAssemblyReference.cache
+/Users/dvs/Documents/kampus/AlgoDat_Praktikum/AlgoDat_praktikum/obj/Debug/AlgoDat_praktikum.csproj.CoreCompileInputs.cache
+/Users/dvs/Documents/kampus/AlgoDat_Praktikum/AlgoDat_praktikum/obj/Debug/AlgoDat_praktikum.exe
+/Users/dvs/Documents/kampus/AlgoDat_Praktikum/AlgoDat_praktikum/obj/Debug/AlgoDat_praktikum.pdb

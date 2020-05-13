@@ -8,6 +8,8 @@ namespace AlgoDat_praktikum
 {
     public class MultiSetUnsortedArray : IMultiSet
     {
+        public int[] data;
+        
         public bool Delete(int elem)
         {
             throw new NotImplementedException();
