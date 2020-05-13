@@ -12,7 +12,21 @@ namespace AlgoDat_praktikum
     {
         static void Main(string[] args)
         {
-            Console.Write("Hallo World");
+            IDictionary baseI;
+            
+            // Stuffe 1
+            // Auswahl ADT : 4 Mösgliche Interfaces
+            // z.B ISortedSet
+                
+                // Stuffe 2
+                // Auswahl konkreten DatenTyp
+                // z.B SetSortedArray
+                // dann baseI = new SetSortedArray....
+                
+            // Nutzung der gewahlten Konkrete datenTyp
+            // loop z.B
+            // i.print()
+            // i.search()
         }
     }
 }
