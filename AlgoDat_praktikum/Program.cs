@@ -12,6 +12,7 @@ namespace AlgoDat_praktikum
     {
         static void Main(string[] args)
         {
+            Console.Write("Hallo World");
         }
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="implementation\MultiSetUnsortedArray.cs" />
     <Compile Include="implementation\SetSortedArray.cs" />
     <Compile Include="implementation\SetUnsortedArray.cs" />
+    <Compile Include="interfaces\IBinTree.cs" />
     <Compile Include="interfaces\IDictionary.cs" />
     <Compile Include="interfaces\IMultiSet.cs" />
     <Compile Include="interfaces\IMultiSetSorted.cs" />
