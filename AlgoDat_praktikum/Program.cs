@@ -13,7 +13,7 @@ namespace AlgoDat_praktikum
         {
             // Main to test Array
             IDictionary basis;
-            basis = new MultiSetUnsortedArray();
+            basis = new SetUnsortedArray();
             int userChoice = 0;
             int userInsertedNumber;
 
