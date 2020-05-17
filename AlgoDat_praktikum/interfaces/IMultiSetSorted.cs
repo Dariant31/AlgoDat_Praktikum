@@ -8,6 +8,5 @@ namespace AlgoDat_praktikum
 {
     public interface IMultiSetSorted : IDictionary
     {
-        void Sort();
     }
 }
