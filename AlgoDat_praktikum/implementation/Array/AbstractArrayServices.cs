@@ -1,13 +1,23 @@
+using System;
+
 namespace AlgoDat_praktikum
 {
     public abstract class AbstractArrayServices
     {
-        public int[] data;
-        
-        public SearchReturnObject search()
+        // Fixed size array
+        public int[] data = new int[7];
+
+        public void Print()
         {
-            SearchReturnObject retValue = new SearchReturnObject(1, true);
-            return retValue;
+            Console.Write("[");
+            for (int i = 0; i < data.Length; i++)
+            {
+                Console.Write($"{data[i]}");
+                if (i == data.Length - 1) continue;
+                Console.Write(",");
+            }
+
+            Console.Write("]");
         }
     }
 }

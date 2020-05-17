@@ -10,5 +10,9 @@ namespace AlgoDat_praktikum
             this.position = position;
             this.isFound = isFound;
         }
+        
+        public SearchReturnObject()
+        {
+        }
     }
 }
