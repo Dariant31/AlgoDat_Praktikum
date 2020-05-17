@@ -10,13 +10,10 @@ namespace AlgoDat_praktikum
     {
         public new bool Insert(int elem)
         {
-            if (!Search(elem))
-            {
-                base.Insert(elem);
-                return true;
-            }
+            if (Search(elem)) return false;
+            base.Insert(elem);
+            return true;
 
-            return false;
         }
     }
 }
