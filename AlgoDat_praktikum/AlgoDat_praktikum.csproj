@@ -44,7 +44,6 @@
   <ItemGroup>
     <Compile Include="elementObject\AvlTreeObject.cs" />
     <Compile Include="elementObject\ElementObject.cs" />
-    <Compile Include="elementObject\SearchReturnObject.cs" />
     <Compile Include="elementObject\TreapElementObject.cs" />
     <Compile Include="elementObject\TreeElementObject.cs" />
     <Compile Include="implementation\Array\AbstractArrayServices.cs" />

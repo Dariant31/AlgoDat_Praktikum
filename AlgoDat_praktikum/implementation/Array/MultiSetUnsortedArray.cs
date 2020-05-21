@@ -6,28 +6,53 @@ using System.Threading.Tasks;
 
 namespace AlgoDat_praktikum
 {
-    public class MultiSetUnsortedArray : IMultiSet
+    public class MultiSetUnsortedArray : AbstractArrayServices, IMultiSet
     {
-        public int[] data;
-        
+        private int _localisation;
+        private int _nextFreePosition;
+
         public bool Delete(int elem)
         {
-            throw new NotImplementedException();
+            if (!Search(elem)) return false;
+            data[_localisation] = data[_nextFreePosition - 1];
+            data[_nextFreePosition - 1] = 0;
+            return true;
         }
 
         public bool Insert(int elem)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Print()
-        {
-            throw new NotImplementedException();
+            Search(elem);
+            
+            // 7 means there is no space left in the array
+            // because the arrayLength is Fixed at 7
+            if (_nextFreePosition == 7) return false;
+            data[_nextFreePosition] = elem;
+            return true;
         }
 
         public bool Search(int elem)
         {
-            throw new NotImplementedException();
+            _nextFreePosition = 7;
+            bool isFound = false;
+
+            // Linear Search
+            for (int i = 0; i < data.Length; i++)
+            {
+                // search for element
+                if (elem == data[i])
+                {
+                    _localisation = i;
+                    isFound = true;
+                }
+
+                // search for nextFreePosition
+                if (data[i] != 0) continue;
+                _nextFreePosition = i;
+                break;
+            }
+
+            _localisation = (isFound) ? _localisation : _nextFreePosition;
+            return isFound;
         }
     }
 }

@@ -6,33 +6,14 @@ using System.Threading.Tasks;
 
 namespace AlgoDat_praktikum
 {
-    public class SetSortedArray : ISetSorted
+    public class SetSortedArray : MultiSetSortedArray, ISetSorted
     {
-        public int[] data;
-        
-        public bool Delete(int elem)
+        public new bool Insert(int elem)
         {
-            throw new NotImplementedException();
-        }
+            if (base.Search(elem)) return false;
+            base.Insert(elem);
+            return true;
 
-        public bool Insert(int elem)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Print()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Sort()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Search(int elem)
-        {
-            throw new NotImplementedException();
         }
     }
 }
