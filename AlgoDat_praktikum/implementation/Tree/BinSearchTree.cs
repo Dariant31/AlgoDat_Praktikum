@@ -1,8 +1,8 @@
 namespace AlgoDat_praktikum
 {
-    public class BinSearchTree : IBinTree
+    public class BinSearchTree : ISetSorted
     {
-        public TreeElementObject data;
+        public TreeElement data;
         
         public bool Search(int element)
         {
