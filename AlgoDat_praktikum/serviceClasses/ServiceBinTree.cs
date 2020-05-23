@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace AlgoDat_praktikum
 {
-    class ServiceBinTree
+    public class ServiceBinTree
     {
+        protected TreeElement data;
+
+        public void Print()
+        {
+            data.PrintElement();
+        }
     }
 }

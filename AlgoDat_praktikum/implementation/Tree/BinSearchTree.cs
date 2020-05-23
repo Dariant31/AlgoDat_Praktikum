@@ -1,9 +1,9 @@
 namespace AlgoDat_praktikum
 {
-    public class BinSearchTree : ISetSorted
+    public class BinSearchTree : ServiceBinTree, ISetSorted
     {
-        public TreeElement data;
-        
+        //public TreeElement data = new TreapElementObject();
+
         public bool Search(int element)
         {
             throw new System.NotImplementedException();
@@ -19,22 +19,7 @@ namespace AlgoDat_praktikum
             throw new System.NotImplementedException();
         }
 
-        public void Print()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public void Sort()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void LeftRotation()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void RightRotation()
         {
             throw new System.NotImplementedException();
         }
