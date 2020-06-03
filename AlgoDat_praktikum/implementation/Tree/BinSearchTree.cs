@@ -2,8 +2,6 @@ namespace AlgoDat_praktikum
 {
     public class BinSearchTree : ServiceBinTree, ISetSorted
     {
-        //public TreeElement data = new TreapElementObject();
-
         public bool Search(int element)
         {
             if (data == null)
@@ -14,17 +12,6 @@ namespace AlgoDat_praktikum
             return data.SearchElement(element).foundElement;
         }
 
-        //public bool Insert(int element)
-        //{
-        //    if (data == null)
-        //    {
-        //        data = new TreeElement(element);
-        //        return true;
-        //    }
-
-        //    return data.InsertElement(element);
-        //}
-
         public bool Insert(int element)
         {
             if (data == null) return false;
@@ -33,7 +20,7 @@ namespace AlgoDat_praktikum
 
             if (res.foundElement) return false; // Element found
 
-            if (res.found.GetContent() < element)
+            if (res.found.content < element)
             {
                 res.found.left = new TreeElement(element);
             }
@@ -49,8 +36,10 @@ namespace AlgoDat_praktikum
         {
             SearchResult res = data.SearchElement(element);
 
-            if (res.foundElement == false) return false; // Element not found
+            // Element not found
+            if (res.foundElement == false) return false; 
 
+            // Element has no successors
             if (res.found.left == null && res.found.right == null) // Element found is a leaf
             {
                 if (res.previous == null) // Root (leaf) has to be removed
@@ -59,19 +48,12 @@ namespace AlgoDat_praktikum
                     return true;
                 }
 
-                if (res.previous.left == res.found)
-                {
-                    res.previous.left = null;
-                }
-                else if (res.previous.right == res.found)
-                {
-                    res.previous.right = null;
-                }
-
+                DelFromLine(res.previous, res.found, null);
                 return true;
             }
 
-            if (res.found.left == null || res.found.right == null)
+            // Element has only one successor
+            if ((res.found.left == null) != (res.found.right == null))
             {
                 TreeElement tmp = null;
 
@@ -83,41 +65,39 @@ namespace AlgoDat_praktikum
                     data = tmp;
                 }
 
-                if (res.previous.left == res.found)
-                {
-                    res.previous.left = tmp;
-                }
-                else if (res.previous.right == res.found)
-                {
-                    res.previous.right = tmp;
-                }
-
+                DelFromLine(res.previous, res.found, tmp);
                 return true;
             }
 
+            // Element hast two successors
             if (res.found.left != null && res.found.right != null)
             {
-                DelSymPred(res.found);
+                DelSymmetricPredecessor(res.found);
                 return true;
             }
 
             return false; // Sth went wrong
         }
 
-        private void DelSymPred(TreeElement node)
+        // Support Methods
+        private void DelFromLine(TreeElement predecessor, TreeElement toBeDeleted, TreeElement successor)
+        {
+            if (predecessor == toBeDeleted)
+            {
+                predecessor = successor;
+            }
+            else if (predecessor == toBeDeleted)
+            {
+                predecessor = successor;
+            }
+        }
+
+        private void DelSymmetricPredecessor(TreeElement node)
         {
             TreeElement biggestSuccessor, tmp;
 
             // Get biggest successor (symmetric predecessor)
-            biggestSuccessor = node;
-            if (biggestSuccessor.left.right != null)
-            {
-                biggestSuccessor = biggestSuccessor.left;
-                while (biggestSuccessor.right.right != null)
-                {
-                    biggestSuccessor = biggestSuccessor.right;
-                }
-            }
+            biggestSuccessor = GetBiggestSuccessor(node);
 
             if (biggestSuccessor == node)
             {
@@ -130,6 +110,23 @@ namespace AlgoDat_praktikum
                 biggestSuccessor.right = tmp.left;
             }
             node.content = tmp.content;
+        }
+
+        private TreeElement GetBiggestSuccessor(TreeElement node) // Get symmetric predecessor
+        {
+            TreeElement biggestSuccessor;
+
+            biggestSuccessor = node;
+            if (biggestSuccessor.left.right != null)
+            {
+                biggestSuccessor = biggestSuccessor.left;
+                while (biggestSuccessor.right.right != null)
+                {
+                    biggestSuccessor = biggestSuccessor.right;
+                }
+            }
+
+            return biggestSuccessor;
         }
     }
 }

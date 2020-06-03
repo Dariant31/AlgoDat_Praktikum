@@ -50,36 +50,5 @@ namespace AlgoDat_praktikum
             // Element found
             return new SearchResult(true, this, prev);
         }
-
-        public bool InsertElement(int e)
-        {
-            if (e < content) // Left branch
-            {
-                if (left != null)
-                {
-                    return left.InsertElement(e);
-                }
-
-                left = new TreeElement(e);
-                return true;
-            }
-            else if (e > content) // right branch
-            {
-                if (right != null)
-                {
-                    return right.InsertElement(e);
-                }
-
-                right = new TreeElement(e);
-                return true;
-            }
-
-            return false;
-        }
-
-        public bool DeleteElement(int e)
-        {
-
-        }
     }
 }
