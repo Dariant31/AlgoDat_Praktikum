@@ -2,7 +2,7 @@ namespace AlgoDat_praktikum
 {
     public class BinSearchTree : ServiceBinTree, ISetSorted
     {
-        public bool Search(int element)
+        public bool Search(int element) // (1)
         {
             if (data == null)
             {
@@ -14,13 +14,17 @@ namespace AlgoDat_praktikum
 
         public bool Insert(int element)
         {
-            if (data == null) return false;
+            if (data == null)
+            {
+                data = new TreeElement(element);
+                return false;
+            }
 
             SearchResult res = data.SearchElement(element);
 
             if (res.foundElement) return false; // Element found
 
-            if (res.found.content < element)
+            if (res.found.content > element)
             {
                 res.found.left = new TreeElement(element);
             }
@@ -82,13 +86,13 @@ namespace AlgoDat_praktikum
         // Support Methods
         private void DelFromLine(TreeElement predecessor, TreeElement toBeDeleted, TreeElement successor)
         {
-            if (predecessor == toBeDeleted)
+            if (predecessor.left == toBeDeleted)
             {
-                predecessor = successor;
+                predecessor.left = successor;
             }
-            else if (predecessor == toBeDeleted)
+            else
             {
-                predecessor = successor;
+                predecessor.right = successor;
             }
         }
 

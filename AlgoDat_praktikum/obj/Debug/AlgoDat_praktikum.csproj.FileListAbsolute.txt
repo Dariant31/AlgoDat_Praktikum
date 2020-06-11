@@ -5,3 +5,10 @@
 /Users/dvs/Documents/kampus/AlgoDat_Praktikum/AlgoDat_praktikum/obj/Debug/AlgoDat_praktikum.csproj.CoreCompileInputs.cache
 /Users/dvs/Documents/kampus/AlgoDat_Praktikum/AlgoDat_praktikum/obj/Debug/AlgoDat_praktikum.exe
 /Users/dvs/Documents/kampus/AlgoDat_Praktikum/AlgoDat_praktikum/obj/Debug/AlgoDat_praktikum.pdb
+D:\Studium\B-AMP4\Algorithmen und Datenstrukturen\Praktikum\Code\AlgoDat_praktikum\obj\Debug\AlgoDat_praktikum.csprojAssemblyReference.cache
+D:\Studium\B-AMP4\Algorithmen und Datenstrukturen\Praktikum\Code\AlgoDat_praktikum\obj\Debug\AlgoDat_praktikum.csproj.CoreCompileInputs.cache
+D:\Studium\B-AMP4\Algorithmen und Datenstrukturen\Praktikum\Code\AlgoDat_praktikum\obj\Debug\AlgoDat_praktikum.exe
+D:\Studium\B-AMP4\Algorithmen und Datenstrukturen\Praktikum\Code\AlgoDat_praktikum\obj\Debug\AlgoDat_praktikum.pdb
+D:\Studium\B-AMP4\Algorithmen und Datenstrukturen\Praktikum\Code\AlgoDat_praktikum\bin\Debug\AlgoDat_praktikum.exe.config
+D:\Studium\B-AMP4\Algorithmen und Datenstrukturen\Praktikum\Code\AlgoDat_praktikum\bin\Debug\AlgoDat_praktikum.exe
+D:\Studium\B-AMP4\Algorithmen und Datenstrukturen\Praktikum\Code\AlgoDat_praktikum\bin\Debug\AlgoDat_praktikum.pdb
