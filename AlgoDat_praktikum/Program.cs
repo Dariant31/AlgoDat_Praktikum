@@ -57,8 +57,18 @@ namespace AlgoDat_praktikum
                         Console.Write("Your input : ");
                         userDataTypeChoice = int.Parse(userDataTypeChoice + Console.ReadLine());
                         break;
-                    // case 2 : for Linked List
-                    // case 3 : for tree
+                    case 2:
+                        Console.WriteLine("Select your Linked-List Type : ");
+                        Console.WriteLine("------------------------");
+                        Console.WriteLine("1. Multiset    - Sorted    Linked-List");
+                        Console.WriteLine("2. Multiset    - Unsorted  Linked-List");
+                        Console.WriteLine("3. Set         - Sorted    Linked-List");
+                        Console.WriteLine("4. Set         - Unorted   Linked-List");
+                        Console.WriteLine("------------------------");
+                        Console.Write("Your input : ");
+                        userDataTypeChoice = int.Parse(userDataTypeChoice + Console.ReadLine());
+                        break;
+                        // case 3 : for tree
                 }
 
                 switch (userDataTypeChoice)
@@ -79,8 +89,21 @@ namespace AlgoDat_praktikum
                         userDataTypeChoiceStr = "Set - Unsorted - Array";
                         return new SetUnsortedArray();
                         break;
-                    // all other data type in here
-                    
+                    case 21:
+                        userDataTypeChoiceStr = "MultiSet - Sorted - Linked-List";
+                        return new MultiSetSortedLinkedList();
+                    case 22:
+                        userDataTypeChoiceStr = "MultiSet - Unsorted - Linked-List";
+                        return new MultiSetUnsortedLinkedList();
+                    case 23:
+                        userDataTypeChoiceStr = "Set - Sorted - Linked-List";
+                        return new SetSortedLinkedList();
+                    case 24:
+                        userDataTypeChoiceStr = "Set - Unsorted - Linked-List";
+                        return new SetUnsortedLinkedList();
+
+                        // all other data type in here
+
                 }
                 
                 return new MultiSetSortedArray();
@@ -111,7 +134,7 @@ namespace AlgoDat_praktikum
                     switch (userActionChoice)
                     {
                         case 1:
-                            Console.WriteLine("Type the Number to insert into Array :");
+                            Console.WriteLine("Type the Number to insert into your " + userDataTypeChoiceStr + " :");
                             GetUserInputValue();
                             GiveResponseFromAction(basis.Insert(userInsertedNumber));
                             break;
@@ -122,7 +145,7 @@ namespace AlgoDat_praktikum
                             break;
                         case 3:
                             Console.WriteLine("-----------------------");
-                            Console.Write("Here is the Array : ");
+                            Console.Write("Here is the " + userDataTypeChoiceStr + " :");
                             basis.Print();
                             Console.WriteLine();
                             Console.WriteLine("-----------------------");
