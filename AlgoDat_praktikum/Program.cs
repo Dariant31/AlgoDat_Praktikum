@@ -15,6 +15,7 @@ namespace AlgoDat_praktikum
             IDictionary basis;
             int userActionChoice = 0;
             int userDataTypeChoice = 0;
+            string userTypeChoiceStr = "";
             string userDataTypeChoiceStr = "";
             int userInsertedNumber;
 
@@ -74,32 +75,40 @@ namespace AlgoDat_praktikum
                 switch (userDataTypeChoice)
                 {
                     case 11:
-                        userDataTypeChoiceStr = "MultiSet - Sorted - Array";
+                        userDataTypeChoiceStr = "Array";
+                        userTypeChoiceStr = "MultiSet - Sorted";
                         return new MultiSetSortedArray();
                         break;
                     case 12:
-                        userDataTypeChoiceStr = "MultiSet - Unsorted - Array";
+                        userDataTypeChoiceStr = "Array";
+                        userTypeChoiceStr = "MultiSet - Unsorted";
                         return new MultiSetUnsortedArray();
                         break;
                     case 13:
-                        userDataTypeChoiceStr = "Set - Sorted - Array";
+                        userDataTypeChoiceStr = "Array";
+                        userTypeChoiceStr = "Set - Sorted";
                         return new SetSortedArray();
                         break;
                     case 14:
-                        userDataTypeChoiceStr = "Set - Unsorted - Array";
+                        userDataTypeChoiceStr = "Array";
+                        userTypeChoiceStr = "Set - Unsorted";
                         return new SetUnsortedArray();
                         break;
                     case 21:
-                        userDataTypeChoiceStr = "MultiSet - Sorted - Linked-List";
+                        userDataTypeChoiceStr = "Linked-List";
+                        userTypeChoiceStr = "MultiSet - Sorted";
                         return new MultiSetSortedLinkedList();
                     case 22:
-                        userDataTypeChoiceStr = "MultiSet - Unsorted - Linked-List";
+                        userDataTypeChoiceStr = "Linked-List";
+                        userTypeChoiceStr = "MultiSet - Unsorted";
                         return new MultiSetUnsortedLinkedList();
                     case 23:
-                        userDataTypeChoiceStr = "Set - Sorted - Linked-List";
+                        userDataTypeChoiceStr = "Linked-List";
+                        userTypeChoiceStr = "Set - Sorted";
                         return new SetSortedLinkedList();
                     case 24:
-                        userDataTypeChoiceStr = "Set - Unsorted - Linked-List";
+                        userDataTypeChoiceStr = "Linked-List";
+                        userTypeChoiceStr = "Set - Unsorted";
                         return new SetUnsortedLinkedList();
 
                         // all other data type in here
@@ -119,7 +128,7 @@ namespace AlgoDat_praktikum
                 Console.Clear();
                 while (userActionChoice != 4)
                 {
-                    Console.WriteLine(userDataTypeChoiceStr);
+                    Console.WriteLine(userTypeChoiceStr + " " + userDataTypeChoiceStr);
                     Console.WriteLine("-----------------------");
                     Console.WriteLine("Please Select Your Action :");
                     Console.WriteLine("1. Insert");
