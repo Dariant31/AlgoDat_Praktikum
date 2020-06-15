@@ -42,9 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="elementObject\AvlTreeObject.cs" />
     <Compile Include="elementObject\ElementObject.cs" />
-    <Compile Include="elementObject\TreapElementObject.cs" />
     <Compile Include="elementObject\TreeElement.cs" />
     <Compile Include="implementation\Array\AbstractArrayServices.cs" />
     <Compile Include="implementation\Array\MultiSetSortedArray.cs" />
