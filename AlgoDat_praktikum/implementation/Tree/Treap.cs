@@ -1,6 +1,6 @@
 namespace AlgoDat_praktikum
 {
-    public class Treap : ServiceBinTree
+    public class Treap : ServiceBinTree, IDictionary
     {
         // Data
         // Bereits in der ServiceBinTree-Klasse definiert
@@ -26,5 +26,19 @@ namespace AlgoDat_praktikum
 
         // Allgemein:
         // Die meisten Algorithmen koennen in Pseudo-Code-Form in den Aufzeichnungen der VL gefunden werden!
+        public bool Search(int element)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public bool Insert(int element)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public bool Delete(int element)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
