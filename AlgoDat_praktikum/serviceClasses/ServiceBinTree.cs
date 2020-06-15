@@ -26,7 +26,8 @@ namespace AlgoDat_praktikum
 
         public void Print()
         {
-            data.PrintElement();
+            if (data != null)
+                data.PrintElement();
         }
     }
 }
