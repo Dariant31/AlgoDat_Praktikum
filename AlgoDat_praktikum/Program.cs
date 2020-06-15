@@ -11,7 +11,6 @@ namespace AlgoDat_praktikum
     {
         static void Main(string[] args)
         {
-            // Main to test Array
             IDictionary basis;
             int userActionChoice = 0;
             int userDataTypeChoice = 0;
@@ -33,7 +32,7 @@ namespace AlgoDat_praktikum
             IDictionary SelectDataType()
             {
                 userDataTypeChoice = 0;
-                
+
                 Console.Clear();
                 Console.WriteLine("Select your Data Type : ");
                 Console.WriteLine("------------------------");
@@ -116,9 +115,8 @@ namespace AlgoDat_praktikum
                         userDataTypeChoiceStr = "Linked-List";
                         userTypeChoiceStr = "Set - Unsorted";
                         return new SetUnsortedLinkedList();
-
                 }
-                
+
                 return new MultiSetSortedArray();
             }
 
