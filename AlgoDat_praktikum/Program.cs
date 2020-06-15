@@ -157,6 +157,7 @@ namespace AlgoDat_praktikum
                         case 3:
                             Console.WriteLine("-----------------------");
                             Console.Write("Here is the " + userDataTypeChoiceStr + " :");
+                            Console.WriteLine();
                             basis.Print();
                             Console.WriteLine();
                             Console.WriteLine("-----------------------");
