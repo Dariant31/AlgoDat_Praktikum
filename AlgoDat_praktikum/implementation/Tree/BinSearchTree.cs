@@ -17,7 +17,7 @@ namespace AlgoDat_praktikum
             if (data == null)
             {
                 data = new TreeElement(element);
-                return false;
+                return true;
             }
 
             SearchResult res = data.SearchElement(element);
