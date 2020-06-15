@@ -11,7 +11,6 @@ namespace AlgoDat_praktikum
     {
         static void Main(string[] args)
         {
-            // Main to test Array
             IDictionary basis;
             int userActionChoice = 0;
             int userDataTypeChoice = 0;
@@ -33,16 +32,18 @@ namespace AlgoDat_praktikum
             IDictionary SelectDataType()
             {
                 userDataTypeChoice = 0;
-                
+
                 Console.Clear();
                 Console.WriteLine("Select your Data Type : ");
                 Console.WriteLine("------------------------");
                 Console.WriteLine("1. Array");
                 Console.WriteLine("2. Linked List");
-                Console.WriteLine("3. Tree");
+                Console.WriteLine("3. Binary Tree");
+                Console.WriteLine("4. Avl Tree");
+                Console.WriteLine("5. Treap");
                 Console.WriteLine("------------------------");
                 Console.Write("Your input : ");
-                userDataTypeChoice = int.Parse(Console.ReadLine() ?? "4");
+                userDataTypeChoice = int.Parse(Console.ReadLine() ?? "´6");
                 Console.Clear();
 
                 switch (userDataTypeChoice)
@@ -69,7 +70,15 @@ namespace AlgoDat_praktikum
                         Console.Write("Your input : ");
                         userDataTypeChoice = int.Parse(userDataTypeChoice + Console.ReadLine());
                         break;
-                        // case 3 : for tree
+                    case 3:
+                        userDataTypeChoiceStr = "Binary Tree";
+                        return new BinSearchTree();
+                    case 4:
+                        userDataTypeChoiceStr = "AVL Tree";
+                        return new AvlTree();
+                    case 5:
+                        userDataTypeChoiceStr = "Treap";
+                        return new Treap();
                 }
 
                 switch (userDataTypeChoice)
@@ -78,22 +87,18 @@ namespace AlgoDat_praktikum
                         userDataTypeChoiceStr = "Array";
                         userTypeChoiceStr = "MultiSet - Sorted";
                         return new MultiSetSortedArray();
-                        break;
                     case 12:
                         userDataTypeChoiceStr = "Array";
                         userTypeChoiceStr = "MultiSet - Unsorted";
                         return new MultiSetUnsortedArray();
-                        break;
                     case 13:
                         userDataTypeChoiceStr = "Array";
                         userTypeChoiceStr = "Set - Sorted";
                         return new SetSortedArray();
-                        break;
                     case 14:
                         userDataTypeChoiceStr = "Array";
                         userTypeChoiceStr = "Set - Unsorted";
                         return new SetUnsortedArray();
-                        break;
                     case 21:
                         userDataTypeChoiceStr = "Linked-List";
                         userTypeChoiceStr = "MultiSet - Sorted";
@@ -110,11 +115,8 @@ namespace AlgoDat_praktikum
                         userDataTypeChoiceStr = "Linked-List";
                         userTypeChoiceStr = "Set - Unsorted";
                         return new SetUnsortedLinkedList();
-
-                        // all other data type in here
-
                 }
-                
+
                 return new MultiSetSortedArray();
             }
 

@@ -42,10 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="elementObject\AvlTreeObject.cs" />
     <Compile Include="elementObject\ElementObject.cs" />
-    <Compile Include="elementObject\TreapElementObject.cs" />
-    <Compile Include="elementObject\TreeElementObject.cs" />
+    <Compile Include="elementObject\TreeElement.cs" />
     <Compile Include="implementation\Array\AbstractArrayServices.cs" />
     <Compile Include="implementation\Array\MultiSetSortedArray.cs" />
     <Compile Include="implementation\Array\MultiSetUnsortedArray.cs" />
@@ -58,7 +56,6 @@
     <Compile Include="implementation\Tree\AvlTree.cs" />
     <Compile Include="implementation\Tree\BinSearchTree.cs" />
     <Compile Include="implementation\Tree\Treap.cs" />
-    <Compile Include="interfaces\IBinTree.cs" />
     <Compile Include="interfaces\IDictionary.cs" />
     <Compile Include="interfaces\IMultiSet.cs" />
     <Compile Include="interfaces\IMultiSetSorted.cs" />
@@ -66,6 +63,7 @@
     <Compile Include="interfaces\ISetSorted.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="serviceClasses\ServiceBinTree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
