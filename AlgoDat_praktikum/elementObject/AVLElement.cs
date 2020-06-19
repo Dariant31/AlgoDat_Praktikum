@@ -43,6 +43,7 @@ namespace AlgoDat_praktikum
 
         public int BalanceFactor()
         {
+
             int heightR = 0;
             int heightL = 0;
             if ((AVLElement)right == null && (AVLElement)left == null)
@@ -115,7 +116,9 @@ namespace AlgoDat_praktikum
 
         public AVLElement BFSearch()
         {
-            if(right != null || left != null)
+            AVLElement l, r;
+
+            if (right != null || left != null)
             {
                 int BF = 0;
                 int BFR = 0;
@@ -146,13 +149,27 @@ namespace AlgoDat_praktikum
                     }
                     else
                     {
-                        AVLElement l = ((AVLElement)left).BFSearch();
-                        AVLElement r = ((AVLElement)right).BFSearch();
+                        l = ((AVLElement)left).BFSearch();
+                        r = ((AVLElement)right).BFSearch();
 
-                        return (l == null) ? r : l; // TODO: if kaputt this is probablz schuld
+                        return l ?? r; // TODO: if kaputt this is probablz schuld
                     }
                 }
-            } 
+                else
+                {
+                    l = null;
+                    r = null;
+
+                    if (left != null)
+                        l = ((AVLElement)left).BFSearch();
+
+                    if (right != null)
+                        r = ((AVLElement)right).BFSearch();
+
+                    return l ?? r; // TODO: if kaputt this is probablz schuld
+                }
+            }
+
             return null;
         } 
     }

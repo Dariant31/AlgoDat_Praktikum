@@ -109,7 +109,9 @@ namespace AlgoDat_praktikum
                     e.LeftRotation();
                 }
             }
+            data.HeightCalc();
         }
+
 
         //public AVLElement RightRotation(AVLElement e)
         //{
