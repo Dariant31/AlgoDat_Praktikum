@@ -75,43 +75,75 @@ namespace AlgoDat_praktikum
         public void RightRotation()
         {
             AVLElement temp;
-            int temp2 = left.content;
+            int temp2;
 
-            left.content = content;
-            content = temp2;
+            if (left == null)
+            {
+                temp2 = content;
+                content = right.content;
+                right.content = temp2;
 
-            temp = (AVLElement)left;
-            left = (AVLElement)right;
-            right = temp;
+                left = right;
+                right = left.right;
 
-            temp = (AVLElement)left;
-            left = right.left;
-            right.left = temp;
+                left.right = left.left;
+                left.left = null;
+            }
+            else
+            {
+                temp2 = left.content;
+                left.content = content;
+                content = temp2;
 
-            temp = (AVLElement)right.right;
-            right.right = right.left;
-            right.left = temp;
+                temp = (AVLElement)left;
+                left = (AVLElement)right;
+                right = temp;
+
+                temp = (AVLElement)left;
+                left = right.left;
+                right.left = temp;
+
+                temp = (AVLElement)right.right;
+                right.right = right.left;
+                right.left = temp;
+            }
         }
 
         public void LeftRotation()
         {
             AVLElement temp;
-            int temp2 = right.content;
+            int temp2;
+            if (right == null)
+            {
+                temp2 = content;
+                content = left.content;
+                left.content = temp2;
 
-            right.content = content;
-            content = temp2;
+                right = left;
+                left = right.left;
 
-            temp = (AVLElement)right;
-            right = (AVLElement)left;
-            left = temp;
+                right.left = right.right;
+                right.right = null;
+            }
+            else
+            {
+                temp2 = right.content;
 
-            temp = (AVLElement)right;
-            right = left.right;
-            left.right = temp;
+                right.content = content;
+                content = temp2;
 
-            temp = (AVLElement)left.left;
-            left.left = left.right;
-            left.right = temp;
+                temp = (AVLElement)right;
+                right = (AVLElement)left;
+                left = temp;
+
+                temp = (AVLElement)right;
+                right = left.right;
+                left.right = temp;
+
+                temp = (AVLElement)left.left;
+                left.left = left.right;
+                left.right = temp;
+            }
         }
 
         public AVLElement BFSearch()
