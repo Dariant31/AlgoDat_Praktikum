@@ -8,11 +8,12 @@ namespace AlgoDat_praktikum
 {
     class TreapElement : AVLElement
     {
-        int prio;
 
-        public TreapElement(int element, int prio) : base(element)
+        public int heap;
+
+        public TreapElement(int element, int heap) : base(element)
         {
-            this.prio = prio;
+            this.heap = heap;
         }
     }
 }
