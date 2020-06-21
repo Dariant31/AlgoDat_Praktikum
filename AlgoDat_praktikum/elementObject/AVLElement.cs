@@ -48,8 +48,6 @@ namespace AlgoDat_praktikum
             int heightL = 0;
             if ((AVLElement)right == null && (AVLElement)left == null)
             {
-                int fu = 69;
-                int ck = 420;
             }
 
             else if ((AVLElement)right == null)
@@ -72,7 +70,7 @@ namespace AlgoDat_praktikum
             return heightR - heightL;
         }
 
-        public void RightRotation()
+        public virtual void RightRotation()
         {
             AVLElement temp;
             int temp2;
@@ -109,7 +107,7 @@ namespace AlgoDat_praktikum
             }
         }
 
-        public void LeftRotation()
+        public virtual void LeftRotation()
         {
             AVLElement temp;
             int temp2;
