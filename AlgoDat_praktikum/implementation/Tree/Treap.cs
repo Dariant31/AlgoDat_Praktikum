@@ -26,6 +26,13 @@ namespace AlgoDat_praktikum
 
         // Allgemein:
         // Die meisten Algorithmen koennen in Pseudo-Code-Form in den Aufzeichnungen der VL gefunden werden!
+        TreapElement data;
+
+        public void Print()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public bool Search(int element)
         {
             throw new System.NotImplementedException();
@@ -33,7 +40,9 @@ namespace AlgoDat_praktikum
 
         public bool Insert(int element)
         {
-            throw new System.NotImplementedException();
+            InfoReturn res = base.Insert(data, new TreapElement(1, 999));
+            data = (TreapElement)res.newRoot;
+            return res.success;
         }
 
         public bool Delete(int element)

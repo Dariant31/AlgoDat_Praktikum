@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="elementObject\ElementObject.cs" />
+    <Compile Include="elementObject\AVLElement.cs" />
+    <Compile Include="elementObject\TreapElement.cs" />
     <Compile Include="elementObject\TreeElement.cs" />
     <Compile Include="implementation\Array\AbstractArrayServices.cs" />
     <Compile Include="implementation\Array\MultiSetSortedArray.cs" />
