@@ -77,14 +77,14 @@ namespace AlgoDat_praktikum
             if (left == null)
             {
                 temp2 = content;
-                content = right.content;
-                right.content = temp2;
+                content = left.content;
+                left.content = temp2;
 
-                left = right;
-                right = left.right;
+                right = left;
+                left = right.left;
 
-                left.right = left.left;
-                left.left = null;
+                right.left = right.right;
+                right.right = null;
             }
             else
             {
@@ -113,14 +113,14 @@ namespace AlgoDat_praktikum
             if (right == null)
             {
                 temp2 = content;
-                content = left.content;
-                left.content = temp2;
+                content = right.content;
+                right.content = temp2;
 
-                right = left;
-                left = right.left;
+                left = right;
+                right = left.right;
 
-                right.left = right.right;
-                right.right = null;
+                left.right = left.left;
+                left.left = null;
             }
             else
             {

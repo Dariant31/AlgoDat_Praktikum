@@ -58,9 +58,9 @@ namespace AlgoDat_praktikum
                 isLeft = (current.left == s.found) ? true : false;
 
                 if (isLeft)
-                    current.LeftRotation();
-                else
                     current.RightRotation();
+                else
+                    current.LeftRotation();
 
                 s = data.SearchElement(element);
                 current = (TreapElement)s.previous;

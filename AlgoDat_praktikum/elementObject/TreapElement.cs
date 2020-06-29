@@ -18,22 +18,23 @@ namespace AlgoDat_praktikum
 
         public override void LeftRotation()
         {
-            TreapElement l = (TreapElement)left;
+            TreapElement r = (TreapElement)right;
 
             int tmp = heap;
-            heap = l.heap;
-            l.heap = tmp;
+            heap = r.heap;
+            r.heap = tmp;
 
             base.LeftRotation();
         }
 
         public override void RightRotation()
         {
-            TreapElement r = (TreapElement)right;
+            TreapElement l = (TreapElement)left;
 
             int tmp = heap;
-            heap = r.heap;
-            r.heap = tmp;
+            heap = l.heap;
+            l.heap = tmp;
+            
 
             base.RightRotation();
         }
