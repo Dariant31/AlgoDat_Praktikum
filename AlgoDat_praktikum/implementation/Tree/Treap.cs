@@ -96,9 +96,9 @@ namespace AlgoDat_praktikum
             {
 
                 if (l != null && l.heap <= r.heap)
-                    current.LeftRotation();
-                else
                     current.RightRotation();
+                else
+                    current.LeftRotation();
 
 
                 s = data.SearchElement(element);
