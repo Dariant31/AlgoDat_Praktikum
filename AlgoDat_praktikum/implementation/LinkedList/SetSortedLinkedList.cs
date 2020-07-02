@@ -1,4 +1,5 @@
 using System;
+using System.CodeDom;
 using System.ComponentModel;
 
 namespace AlgoDat_praktikum
@@ -9,28 +10,24 @@ namespace AlgoDat_praktikum
         public new bool Insert(int element)
         {
             bool inserted = false;
-            ElementObject neu = new ElementObject();
-            neu.context = element;
+            ElementObject neu = new ElementObject(element);
+
 
             //1. Fall Liste ist leer
-            if (first == null)
+            if (first == null || first.context > element)
             {
-                first = neu;
+                AddFirst(element);
                 inserted = true;
             }
-            //2. Fall Liste besteht aus mindesten einem Element
-            // und die Element ist schon in der Liste vorhanden
-            if (Search(element) == true)
-            {
-                inserted = false;
 
-            }
             //3. Fall Liste besteht nicht in der Liste vorhanden
             else if (Search(element) == false)
             {
+
+
                 ElementObject item = first;
                 // Durchsuche der Liste bis die Position zum Hinzufügen gefunden wird
-                while (item != null && item.next.context < element)
+                while (item.next != null && item.next.context < element)
                 {
                     item = item.next;
                 }
@@ -39,6 +36,13 @@ namespace AlgoDat_praktikum
                 item.next = neu;
 
             }
+            else
+            {
+                throw new Exception("This Element already exists in the linked list");
+            }
+                
+
+            inserted = true;
             return inserted;
         }
     }

@@ -26,14 +26,13 @@ namespace AlgoDat_praktikum
         public bool Insert(int element)
         {
             bool inserted = false;
-            ElementObject neu = new ElementObject();
-            neu.context = element;
+            ElementObject neu = new ElementObject(element);
 
             //1. Fall Liste ist leer
             if (first == null)
             {
                 first = last = neu;
-                inserted = true;
+               
             }
             //2. Das neue Element wird am Ende der Liste hinzugefügt
             else
@@ -41,6 +40,7 @@ namespace AlgoDat_praktikum
                 last.next = neu;
                 last = last.next;
             }
+            inserted = true;
 
             return inserted;
         }
@@ -48,36 +48,46 @@ namespace AlgoDat_praktikum
         public bool Delete(int element)
         {
             bool deleted = false;
-            //1. Liste ist leer
             if (first == null)
             {
+                throw new ArgumentException("The Linked List is empty");
+            }
 
-                deleted = false;
-            }
-            //2. Liste besteht aus einem Element
-            else if (first == last)
+            if (first.context == element)
             {
-                first = last = null;
-                deleted = true;
+
+                if (first.next.context == element)
+                {
+                    first = first.next.next;
+                }
+                else
+                    first = first.next;           
+
             }
-            //3. Liste besteht aus mehreren Elementen
+                
             else
             {
                 ElementObject item = first;
-                // Durchlauf der Liste
-                // solange Elemente in Liste vorhanden und gesuchtes Element noch nicht gefunden
                 while (item.next != null && item.next.context != element)
                     item = item.next;
-                //das zu löschende Element ist in der Nth Stelle
                 if (item.next != null)
-                    item.next = item.next.next;
-                // wenn letztes Element am Ende der Liste ist
-                if (item.next == null)
                 {
-                    last = item;
+                    if (item.next.next.context == element)
+                    {
+                        item.next = item.next.next.next;
+                    }
+                    else
+                    {
+                        item.next = item.next.next;
+                    }
+                    if (item.next == null)
+                        last = item;
                 }
+               
 
             }
+
+            deleted = true;
             return deleted;
         }
 
