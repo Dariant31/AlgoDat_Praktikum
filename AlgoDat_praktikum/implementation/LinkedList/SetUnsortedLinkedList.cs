@@ -1,32 +1,48 @@
+using System;
+
 namespace AlgoDat_praktikum
 {
-    public class SetUnsortedLinkedList : ISet
+    public class SetUnsortedLinkedList : SetSortedLinkedList, ISet
     {
-        public ElementObject data;
-        
-        public bool Search(int element)
-        {
-            throw new System.NotImplementedException();
-        }
 
-        public bool Insert(int element)
+        public new bool Insert(int element)
         {
-            throw new System.NotImplementedException();
-        }
+            bool inserted = false;
+            ElementObject neu = new ElementObject(element);
 
-        public bool Delete(int element)
-        {
-            throw new System.NotImplementedException();
-        }
 
-        public void Print()
-        {
-            throw new System.NotImplementedException();
-        }
+            //1. Fall Liste ist leer
+            if (first == null)
+            {
+                AddFirst(element);
+                inserted = true;
+            }
 
-        public bool Multiple()
-        {
-            throw new System.NotImplementedException();
+            //3. Fall Liste besteht nicht in der Liste vorhanden
+            else if (Search(element) == false)
+            {
+
+
+                ElementObject item = first;
+                // Durchsuche der Liste bis die Position zum Hinzufügen gefunden wird
+                while (item.next != null && item.next.context != element)
+                {
+                    item = item.next;
+                }
+                // die Position wird gefunden
+                neu.next = item.next;
+                item.next = neu;
+
+            }
+            else
+            {
+                throw new Exception("This Element already exists in the linked list");
+            }
+
+
+            inserted = true;
+            return inserted;
         }
     }
+
 }

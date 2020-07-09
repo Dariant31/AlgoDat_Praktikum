@@ -6,5 +6,11 @@ namespace AlgoDat_praktikum
     {
         public int context;
         public ElementObject next;
+
+        public ElementObject(int context)
+        {
+            this.context = context;
+        }
+
     }
 }
