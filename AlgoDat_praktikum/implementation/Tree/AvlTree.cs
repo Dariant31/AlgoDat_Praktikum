@@ -1,6 +1,6 @@
 namespace AlgoDat_praktikum
 {
-    public class AvlTree : ServiceBinTree, IDictionary
+    public class AvlTree : ServiceBinTree, ISetSorted
     {
         // Data
         // Bereits in der ServiceBinTree-Klasse definiert
@@ -26,19 +26,111 @@ namespace AlgoDat_praktikum
 
         // Tipp:
         // Die meisten Algorithmen koennen in Pseudo-Code-Form in den Aufzeichnungen der VL gefunden werden!
+
+        private AVLElement data;
+
+        public void Print()
+        {
+            base.Print(data);
+        }
+
         public bool Search(int element)
         {
-            throw new System.NotImplementedException();
+            return base.Search(data, element);
         }
 
         public bool Insert(int element)
         {
-            throw new System.NotImplementedException();
+            InfoReturn res = base.Insert(data, new AVLElement(element));
+            if (res.success == false)
+                return false;
+
+            data = (AVLElement)res.newRoot;
+
+            BalanceTree();
+
+            return true;
         }
 
         public bool Delete(int element)
         {
-            throw new System.NotImplementedException();
+            // delete from class BinSearchTree
+            InfoReturn res = base.Delete(data, element);
+            if (res.success == false)
+                return false;
+
+            data = (AVLElement)res.newRoot;
+            do BalanceTree();
+            while (data.BFSearch() != null);
+
+            return true;
         }
+
+
+        // Support Methods
+        private void BalanceTree()
+        {
+            data.HeightCalc();
+            AVLElement e = data.BFSearch();
+            
+            if (e == null)
+                return;
+
+
+            AVLElement l = (AVLElement)e.left;
+            AVLElement r = (AVLElement)e.right;
+
+            if (e.BalanceFactor() == -2)
+            {   // -- and - (single rotation)
+                if (l.BalanceFactor() == -1)
+                {
+                    e.RightRotation();
+                }
+                
+                // -- and + (double rotation)
+                else if (l.BalanceFactor() == 1)
+                {
+                    l.LeftRotation();
+                    e.RightRotation();
+                }
+            }
+
+            else if (e.BalanceFactor() == 2)
+            {   // ++ and + (single rotation)
+                if (r.BalanceFactor() == 1)
+                {
+                    e.LeftRotation();
+                }             
+
+                // ++ and - (double rotation)
+                else if (r.BalanceFactor() == -1)
+                {
+                    r.RightRotation();
+                    e.LeftRotation();
+                }
+            }
+            data.HeightCalc();
+        }
+
+
+        //public AVLElement RightRotation(AVLElement e)
+        //{
+        //    AVLElement temp = new AVLElement(0);
+        //    AVLElement clone = ((AVLElement)left);
+        //    temp = (AVLElement)clone.right;
+        //    clone.right = e;
+        //    clone.right.left = temp;
+        //    return clone;
+        //}
+
+        //        public AVLElement LeftRotation()
+        //{
+        //    AVLElement temp = new AVLElement(0);
+        //    AVLElement clone = ((AVLElement)right);
+        //    temp = (AVLElement)clone.left;
+        //    clone.left = this;
+        //    clone.left.right = temp;
+        //    return clone;
+        //}
     }
 }
